@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Inezis\\source\\repos\\Modbus-Server\\Modbus-Server-Changing\\Modbus-Server-Changing.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Inezis\\source\\repos\\Modbus-Server\\Modbus-Server-Changing\\Modbus-Server-Changing.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Inezis\\source\\repos\\Modbus-Server\\Modbus-Server-Changing\\Modbus-Server-Changing.csproj",
+        "projectName": "Modbus-Server-Changing",
+        "projectPath": "C:\\Users\\Inezis\\source\\repos\\Modbus-Server\\Modbus-Server-Changing\\Modbus-Server-Changing.csproj",
+        "packagesPath": "C:\\Users\\Inezis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Inezis\\source\\repos\\Modbus-Server\\Modbus-Server-Changing\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Inezis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://pkgs.dev.azure.com/MOL-CAMPUS/78631fc5-d4e9-44e2-b2af-ef79e7709646/_packaging/IntegrationLayer_Dev/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "EasyModbusTCP": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
