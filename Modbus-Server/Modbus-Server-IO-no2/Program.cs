@@ -50,8 +50,6 @@ namespace ModbusTCPServer
             {
                 modbusServer.holdingRegisters[i] = GetRandomValue();
             }
-
-            // Print all register values.
             PrintRegisterValues();
         }
 
