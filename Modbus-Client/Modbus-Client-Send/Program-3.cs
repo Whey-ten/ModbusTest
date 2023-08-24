@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Timers;
 using EasyModbus;
 
@@ -24,7 +24,7 @@ namespace ModbusTCPClient
                     Console.WriteLine("Successfully connected to the server.");
                 }
 
-                timer = new System.Timers.Timer(20000);
+                timer = new System.Timers.Timer(2000); // Change interval to 2 seconds
                 timer.Elapsed += TimerElapsed;
                 timer.Start();
 
@@ -34,15 +34,14 @@ namespace ModbusTCPClient
                     {
                         Console.WriteLine("Retrieving data from registers...");
 
-                        //changed 10 to 15
-                        int[] values = modbusClient.ReadHoldingRegisters(0, 15);
+                        int[] values = modbusClient.ReadHoldingRegisters(0, 4); // Read first 4 registers
 
                         for (int i = 0; i < values.Length; i++)
                         {
                             Console.WriteLine($"Register {i}: {values[i]}");
                         }
 
-                        System.Threading.Thread.Sleep(10000);
+                        System.Threading.Thread.Sleep(2000); // Wait for 2 seconds
                     }
                     catch (Exception e)
                     {
@@ -68,10 +67,12 @@ namespace ModbusTCPClient
         {
             try
             {
-                // Write a random value to a single register.
-                //Changed 0 to 11 register
-                modbusClient.WriteSingleRegister(10, GetRandomValue());
-                Console.WriteLine("Random value written to the server.");
+                // Write a random value to each of the first 4 registers.
+                for (int register = 0; register < 4; register++)
+                {
+                    modbusClient.WriteSingleRegister(register, GetRandomValue());
+                    Console.WriteLine($"Random value written to Register {register}.");
+                }
             }
             catch (Exception ex)
             {
@@ -81,7 +82,7 @@ namespace ModbusTCPClient
 
         static short GetRandomValue()
         {
-            return (short)random.Next(10, 91);
+            return (short)random.Next(1, 11); // Generate random value between 1 and 10
         }
     }
 }
